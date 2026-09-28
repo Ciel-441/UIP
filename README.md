@@ -1,18 +1,17 @@
 <div align="center">
+  <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/network.svg" alt="UIP Logo" width="100" height="100" />
+  <h1>Unified Intelligence Platform (UIP)</h1>
+  <p><strong>Next-Gen Multi-Tenant Knowledge Graph Engine, Document Intelligence, Real-Time Collaboration, Predictive Simulations &amp; Local Graph-RAG</strong></p>
 
-  <img src="./assets/hero-header.svg" alt="Unified Intelligence Platform (UIP)" width="100%" />
-
-  <br /><br />
-
-  <p align="center">
+  <p>
     <a href="https://github.com/Ciel-441/UIP"><img src="https://img.shields.io/badge/GitHub-Ciel--441%2FUIP-181717?style=flat-square&logo=github" alt="GitHub Repo" /></a>
-    <img src="https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js" alt="Next.js 15" />
     <img src="https://img.shields.io/badge/FastAPI-0.3.0-009688?style=flat-square&logo=fastapi" alt="FastAPI" />
-    <img src="https://img.shields.io/badge/Neo4j-5_Community-008CC1?style=flat-square&logo=neo4j" alt="Neo4j 5" />
-    <img src="https://img.shields.io/badge/PostgreSQL-16-336791?style=flat-square&logo=postgresql" alt="PostgreSQL 16" />
-    <img src="https://img.shields.io/badge/Ollama-Local_LLM-ff79c6?style=flat-square" alt="Ollama Local LLM" />
-    <img src="https://img.shields.io/badge/WebRTC_%26_WS-Enabled-06b6d4?style=flat-square" alt="Real-Time Mesh" />
-    <img src="https://img.shields.io/badge/License-MIT-10b981?style=flat-square" alt="MIT License" />
+    <img src="https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js" alt="Next.js" />
+    <img src="https://img.shields.io/badge/Neo4j-5_Community-008CC1?style=flat-square&logo=neo4j" alt="Neo4j" />
+    <img src="https://img.shields.io/badge/PostgreSQL-16-336791?style=flat-square&logo=postgresql" alt="PostgreSQL" />
+    <img src="https://img.shields.io/badge/Ollama-Local_LLM-purple?style=flat-square" alt="Ollama" />
+    <img src="https://img.shields.io/badge/WebRTC_%26_WebSockets-Enabled-blue?style=flat-square" alt="Real-Time" />
+    <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License" />
   </p>
 
   <p align="center">
@@ -25,7 +24,6 @@
     <a href="#environment-configuration-reference">Configuration</a> &#8226;
     <a href="#founders--core-contributors">Founders</a>
   </p>
-
 </div>
 
 ---
