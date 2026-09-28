@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" width="100%" height="360" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="flowBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070409" />
+      <stop offset="50%" stop-color="#0e0716" />
+      <stop offset="100%" stop-color="#050308" />
+    </linearGradient>
+
+    <linearGradient id="cardGradPink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#140a1b" />
+      <stop offset="100%" stop-color="#0d0613" />
+    </linearGradient>
+
+    <filter id="pinkGlowFilt" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes flowForward {
+        to { stroke-dashoffset: -32; }
+      }
+      @keyframes pulseDot {
+        0%, 100% { r: 3.5px; opacity: 1; }
+        50% { r: 5.5px; opacity: 0.5; }
+      }
+      .flowing-stream-pink {
+        stroke-dasharray: 6 6;
+        animation: flowForward 1s linear infinite;
+      }
+      .packet-pulse-pink {
+        animation: pulseDot 1.4s ease-in-out infinite;
+      }
+      .sans {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+      .mono {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="960" height="360" rx="8" fill="url(#flowBg)" stroke="#2b1536" stroke-width="1.2" />
+
+  <!-- Flowchart Label Header -->
+  <g transform="translate(30, 24)">
+    <circle cx="6" cy="6" r="3.5" fill="#ff79c6" />
+    <text x="16" y="10" fill="#ff92df" font-size="11" font-weight="600" class="mono">SYSTEM ARCHITECTURE PIPELINE &#8226; DATA FLOW</text>
+  </g>
+
+  <!-- ================= CARDS (ROW 1) ================= -->
+  <!-- 1. INGESTION VAULT -->
+  <g transform="translate(30, 50)">
+    <rect width="250" height="120" rx="6" fill="url(#cardGradPink)" stroke="#381d45" stroke-width="1" />
+    <rect x="0" y="0" width="250" height="26" rx="6" fill="#240f31" />
+    <circle cx="12" cy="13" r="3.5" fill="#ff79c6" />
+    <text x="24" y="17" fill="#ffffff" font-size="11" font-weight="700" class="sans">1. INGESTION VAULT</text>
+
+    <text x="14" y="52" fill="#fce7f3" font-size="11" class="mono">&#8226; PDF, DOCX, TXT</text>
+    <text x="24" y="66" fill="#a8a0b0" font-size="9.5" class="mono">Unstructured document ingest</text>
+    <text x="14" y="88" fill="#fce7f3" font-size="11" class="mono">&#8226; Audio Notes &amp; Webcam Snaps</text>
+    <text x="24" y="102" fill="#a8a0b0" font-size="9.5" class="mono">Waveforms and evidence photos</text>
+  </g>
+
+  <!-- 2. AI EXTRACTION & DISCOVERY -->
+  <g transform="translate(360, 50)">
+    <rect width="250" height="120" rx="6" fill="url(#cardGradPink)" stroke="#381d45" stroke-width="1" />
+    <rect x="0" y="0" width="250" height="26" rx="6" fill="#240f31" />
+    <circle cx="12" cy="13" r="3.5" fill="#ff79c6" />
+    <text x="24" y="17" fill="#ffffff" font-size="11" font-weight="700" class="sans">2. AI EXTRACTION &amp; DISCOVERY</text>
+
+    <text x="14" y="52" fill="#fce7f3" font-size="11" class="mono">&#8226; Continuous Discovery Engine</text>
+    <text x="24" y="66" fill="#a8a0b0" font-size="9.5" class="mono">Async background heartbeat loop</text>
+    <text x="14" y="88" fill="#fce7f3" font-size="11" class="mono">&#8226; Local Ollama &amp; Dynamic Rules</text>
+    <text x="24" y="102" fill="#a8a0b0" font-size="9.5" class="mono">Qwen2.5/Llama3 extraction</text>
+  </g>
+
+  <!-- 3. PERSISTENCE BACKBONE -->
+  <g transform="translate(680, 50)">
+    <rect width="250" height="120" rx="6" fill="url(#cardGradPink)" stroke="#381d45" stroke-width="1" />
+    <rect x="0" y="0" width="250" height="26" rx="6" fill="#240f31" />
+    <circle cx="12" cy="13" r="3.5" fill="#ff79c6" />
+    <text x="24" y="17" fill="#ffffff" font-size="11" font-weight="700" class="sans">3. PERSISTENCE BACKBONE</text>
+
+    <text x="14" y="52" fill="#ff79c6" font-size="11" font-weight="600" class="mono">&#8226; Neo4j 5 Graph Database</text>
+    <text x="24" y="66" fill="#a8a0b0" font-size="9.5" class="mono">Entities and Cypher traversals</text>
+    <text x="14" y="88" fill="#fce7f3" font-size="11" class="mono">&#8226; PostgreSQL 16 &amp; Provenance</text>
+    <text x="24" y="102" fill="#a8a0b0" font-size="9.5" class="mono">Multi-tenant ACID and citations</text>
+  </g>
+
+  <!-- ================= CARDS (ROW 2) ================= -->
+  <!-- 5. DUAL VIEW & REASONING (Left) -->
+  <g transform="translate(30, 215)">
+    <rect width="380" height="115" rx="6" fill="url(#cardGradPink)" stroke="#381d45" stroke-width="1" />
+    <rect x="0" y="0" width="380" height="26" rx="6" fill="#240f31" />
+    <circle cx="12" cy="13" r="3.5" fill="#ff79c6" />
+    <text x="24" y="17" fill="#ffffff" font-size="11" font-weight="700" class="sans">5. DUAL VISUALIZATION &amp; REASONING</text>
+
+    <text x="14" y="52" fill="#fce7f3" font-size="11" class="mono">&#8226; 2D Canvas Force-Directed Engine</text>
+    <text x="24" y="66" fill="#a8a0b0" font-size="9.5" class="mono">High-performance particle physics &amp; layouts</text>
+    <text x="14" y="88" fill="#ff79c6" font-size="11" font-weight="600" class="mono">&#8226; 3D WebGL Shaders &amp; @SystemAI RAG</text>
+    <text x="24" y="102" fill="#a8a0b0" font-size="9.5" class="mono">Orbital camera and predictive digital twins</text>
+  </g>
+
+  <!-- 4. ROOM ENCLAVES & REAL-TIME (Right) -->
+  <g transform="translate(540, 215)">
+    <rect width="390" height="115" rx="6" fill="url(#cardGradPink)" stroke="#381d45" stroke-width="1" />
+    <rect x="0" y="0" width="390" height="26" rx="6" fill="#240f31" />
+    <circle cx="12" cy="13" r="3.5" fill="#ff79c6" />
+    <text x="24" y="17" fill="#ffffff" font-size="11" font-weight="700" class="sans">4. MULTI-TENANT ROOM ENCLAVES</text>
+
+    <text x="14" y="52" fill="#fce7f3" font-size="11" class="mono">&#8226; Strict Tenant Query-Level Fencing</text>
+    <text x="24" y="66" fill="#a8a0b0" font-size="9.5" class="mono">Owner, Editor, Observer role hierarchy</text>
+    <text x="14" y="88" fill="#fce7f3" font-size="11" class="mono">&#8226; WebRTC Calling &amp; WebSocket Presence</text>
+    <text x="24" y="102" fill="#a8a0b0" font-size="9.5" class="mono">Peer video, audio, screen share, and chat</text>
+  </g>
+
+  <!-- ================= PROMINENT FLOWING DATA CONNECTORS (PINKISH) ================= -->
+  <!-- Connector 1 -> 2 (80px Wide Flow Pipe) -->
+  <g>
+    <!-- Background Track -->
+    <line x1="280" y1="110" x2="360" y2="110" stroke="#3d1d49" stroke-width="4" stroke-linecap="round" />
+    <!-- Animated Flowing Packet Line -->
+    <line x1="280" y1="110" x2="352" y2="110" stroke="#ff79c6" stroke-width="2.5" class="flowing-stream-pink" filter="url(#pinkGlowFilt)" />
+    <!-- Arrowhead -->
+    <polygon points="360,110 350,105 350,115" fill="#ff79c6" />
+    <!-- Data Pulse Dot -->
+    <circle cx="320" cy="110" r="4" fill="#ff92df" class="packet-pulse-pink" />
+  </g>
+
+  <!-- Connector 2 -> 3 (70px Wide Flow Pipe) -->
+  <g>
+    <line x1="610" y1="110" x2="680" y2="110" stroke="#3d1d49" stroke-width="4" stroke-linecap="round" />
+    <line x1="610" y1="110" x2="672" y2="110" stroke="#ff79c6" stroke-width="2.5" class="flowing-stream-pink" filter="url(#pinkGlowFilt)" />
+    <polygon points="680,110 670,105 670,115" fill="#ff79c6" />
+    <circle cx="645" cy="110" r="4" fill="#ff92df" class="packet-pulse-pink" />
+  </g>
+
+  <!-- Connector 3 -> 4 (Curved Bus Pipe Down to Row 2) -->
+  <g>
+    <path d="M 805 170 L 805 190 Q 805 200, 795 200 L 745 200 Q 735 200, 735 210 L 735 215" fill="none" stroke="#3d1d49" stroke-width="4" stroke-linejoin="round" />
+    <path d="M 805 170 L 805 190 Q 805 200, 795 200 L 745 200 Q 735 200, 735 210 L 735 210" fill="none" stroke="#ff79c6" stroke-width="2.5" stroke-linejoin="round" class="flowing-stream-pink" filter="url(#pinkGlowFilt)" />
+    <polygon points="735,215 730,205 740,205" fill="#ff79c6" />
+    <circle cx="770" cy="200" r="4" fill="#ff92df" class="packet-pulse-pink" />
+  </g>
+
+  <!-- Connector 4 -> 5 (130px Wide Flow Pipe pointing Left to Dual View) -->
+  <g>
+    <line x1="540" y1="272" x2="410" y2="272" stroke="#3d1d49" stroke-width="4" stroke-linecap="round" />
+    <line x1="540" y1="272" x2="418" y2="272" stroke="#ff79c6" stroke-width="2.5" class="flowing-stream-pink" filter="url(#pinkGlowFilt)" />
+    <!-- Arrowhead pointing Left -->
+    <polygon points="410,272 420,267 420,277" fill="#ff79c6" />
+    <circle cx="475" cy="272" r="4" fill="#ff92df" class="packet-pulse-pink" />
+  </g>
+</svg>
