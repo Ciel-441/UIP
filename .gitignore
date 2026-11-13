@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build outputs
+.next/
+out/
+dist/
+build/
+*.egg-info/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+*.env
+!.env.example
+
+# IDE / Tools
+.vscode/
+.idea/
+*.swp
+*.swo
+.agent/
+.agents/
+ANTIGRAVITY_GIT_SPLIT_INSTRUCTIONS.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker & Logs
+*.log
+
+# Uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Database
+postgres_data/
+neo4j_data/
+*.db
+*.sqlite
+*.sqlite3
